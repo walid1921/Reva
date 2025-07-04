@@ -1,0 +1,53 @@
+/*
+Override variable defaults
+==================================================
+This file is used to override default SCSS variables from the Shopware Storefront or Bootstrap.
+
+Because of the !default flags, theme variable overrides have to be declared beforehand.
+https://getbootstrap.com/docs/5.3/customize/sass/#variable-defaults
+*/
+
+$sw-color-brand-primary: #0042a0;
+$sw-border-color: #0042a0;
+$border-radius: 2px;
+//$body-bg: #aac7ffff;
+$font-family-base: "Ubuntu", sans-serif;
+
+
+.product-heading-manufacturer-logo-container {
+  height: fit-content;
+}
+
+.product-detail-manufacturer-link {
+  background-color: rgba(0, 66, 160, 0.38);
+  color: $sw-color-brand-primary;
+  padding: 0.2rem 0.5rem;
+  text-decoration: none;
+  border-radius: $border-radius;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+  font-size: small;
+  line-height: 1.5;
+  letter-spacing: 0.05rem;
+  border: 1px solid $sw-border-color;
+
+  &:hover {
+    text-decoration: none;
+    background-color: $sw-color-brand-primary;
+    color: white;
+  }
+}
+
+
+.cms-listing-col {
+  padding-right: 1px !important;
+  padding-left: 1px !important;
+}
+
+
+//! Product Styling Overrides
+
+.product-box{
+    border: none !important;
+    background-color: #fff;
+}

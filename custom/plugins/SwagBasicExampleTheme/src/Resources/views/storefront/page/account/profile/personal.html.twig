@@ -1,0 +1,28 @@
+{% sw_extends  '@Storefront/storefront/page/account/profile/personal.html.twig'%}
+
+
+{% block page_account_profile_personal_fields_birthday_selects %}
+   <div class="form-row">
+         {% set birthdayDate = data.birthday|date('Y-m-d') %}
+         {% set birthday = data.birthday|date('d') %}
+         {% set birthmonth = data.birthday|date('m') %}
+         {% set birthyear = data.birthday|date('Y') %}
+
+       {% set datePickerPluginOption = {
+           enableTime: false,
+           dateFormat: 'Y-m-d',
+           selectors: {
+             inputDay: '#birthdayDay',
+             inputMonth: '#birthdayMonth',
+             inputYear: '#birthdayYear',
+           },
+       } %}
+
+
+        <input class="form-control" name="birthday" value="{{ birthdayDate }}" data-date-picker data-date-picker-options=" {{ datePickerPluginOption|json_encode }}" />
+        <input type="hidden" id="birthdayDay" name="birthdayDay" value="{{ birthday }}"  />
+        <input type="hidden" id="birthdayMonth" name="birthdayMonth" value="{{ birthmonth }}"  />
+        <input type="hidden" id="birthdayYear" name="birthdayYear" value="{{ birthyear }}"  />
+
+   </div>
+{% endblock %}
