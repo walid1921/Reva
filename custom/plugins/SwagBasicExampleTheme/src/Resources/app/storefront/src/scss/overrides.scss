@@ -12,42 +12,93 @@ $sw-border-color: #0042a0;
 $border-radius: 2px;
 //$body-bg: #aac7ffff;
 $font-family-base: "Ubuntu", sans-serif;
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1900px
+) ;
 
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1940px,
+        xxl: 1920px
+) ;
 
-.product-heading-manufacturer-logo-container {
-  height: fit-content;
+.login-img-background {
+    background-image: url('https://www.zegna.com/content/dam/zegna-commerce/editorials/ratio137/sign-in-sign-up/03.webp');
+    background-size: cover;
+    background-position: center;
+    position: relative;
 }
 
-.product-detail-manufacturer-link {
-  background-color: rgba(0, 66, 160, 0.38);
-  color: $sw-color-brand-primary;
-  padding: 0.2rem 0.5rem;
-  text-decoration: none;
-  border-radius: $border-radius;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  display: inline-block;
-  font-size: small;
-  line-height: 1.5;
-  letter-spacing: 0.05rem;
-  border: 1px solid $sw-border-color;
 
-  &:hover {
-    text-decoration: none;
-    background-color: $sw-color-brand-primary;
+.black-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.5;
+}
+
+.account-register {
     color: white;
-  }
+
+    .login-form {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 2rem;
+        border-radius: $border-radius;
+    }
 }
 
 
-.cms-listing-col {
-  padding-right: 1px !important;
-  padding-left: 1px !important;
-}
+
+//.product-heading-manufacturer-logo-container {
+//  height: fit-content;
+//}
+//
+//.product-detail-manufacturer-link {
+//  background-color: rgba(0, 66, 160, 0.38);
+//  color: $sw-color-brand-primary;
+//  padding: 0.2rem 0.5rem;
+//  text-decoration: none;
+//  border-radius: $border-radius;
+//  transition: background-color 0.3s ease, color 0.3s ease;
+//  display: inline-block;
+//  font-size: small;
+//  line-height: 1.5;
+//  letter-spacing: 0.05rem;
+//  border: 1px solid $sw-border-color;
+//
+//  &:hover {
+//    text-decoration: none;
+//    background-color: $sw-color-brand-primary;
+//    color: white;
+//  }
+//}
+//
+//
+//.cms-listing-col {
+//  padding-right: 1px !important;
+//  padding-left: 1px !important;
+//}
+//
+//
+////! Product Styling Overrides
+//
+//.product-box{
+//    border: none !important;
+//    background-color: #fff;
+//}
 
 
-//! Product Styling Overrides
-
-.product-box{
-    border: none !important;
-    background-color: #fff;
+body {
+    background-color: blue; // Light gray background
+    font-size: 16px; // Base font size
 }
